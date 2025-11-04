@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Custom font */
+@font-face {
+  font-family: "Estedad";
+  src: url("../font/Estedad-Regular.ttf") format("truetype");
+}
+
+/* Tailwind v4 theme override */
+@theme {
+  --font-Estedad: "Estedad", sans-serif;
+  --default-font-family: var(--font-Estedad);
+
+  /* ✅ Define breakpoints here (v4 style) */
+  --breakpoint-xs: 400px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-2xl: 1440px;
+}

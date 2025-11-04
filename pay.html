@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/output.css" />
+    <title>pay</title>
+  </head>
+  <body class="font-Estedad bg-[#F3F3F3] min-h-screen overflow-x-hidden">
+    <!-- #region wraper-->
+    <div class="wrapper w-full max-w-[1440px] flex flex-col mx-auto">
+      <div
+        class="header xs:w-[640px] md:w-5xl 2xl:w-[1440px] mx-auto h-[400px] w-[640px] bg-[url('/src/img/auto-header.jpg')] bg-center bg-cover"
+      >
+        <div class="h-full w-full bg-[#000000]/60 relative">
+          <div
+            class="menu z-50 fixed top-0 left-1/2 transform -translate-x-1/2 2xl:w-[1224px] md:w-[900px] xs:w-[640px] min-w-[412px] h-24 mx-auto bg-[#FFFFFF] rounded-br-2xl rounded-bl-2xl justify-between px-8 flex flex-wrap items-center flex-row"
+          >
+            <!-- #region menu mobile-->
+            <div class="flex md:hidden 2xl:hidden">
+              <details class="dropdown">
+                <summary class="btn btn-ghost m-1">
+                  <img src="./src/img/menu-svgrepo-com.svg" alt="" />
+                </summary>
+                <ul
+                  class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+                >
+                  <li>
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      class="input input-bordered w-full"
+                    />
+                  </li>
+                  <li>
+                    <a
+                      href="./home.html"
+                      class="font-Estedad text-[16px] font-medium"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="font-Estedad text-[16px] font-medium"
+                      >خدمات ما</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="font-Estedad text-[16px] font-medium"
+                      >بلاگ</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="font-Estedad text-[16px] font-medium"
+                      >درباره ما</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#contact-section"
+                      class="font-Estedad text-[16px] font-medium"
+                      >تماس با ما</a
+                    >
+                  </li>
+                </ul>
+              </details>
+            </div>
+            <!-- #endregion menu mobile-->
+            <div class="">
+              <img src="./src/img/Logo.png" alt="" />
+            </div>
+
+            <div
+              class="hidden md:flex w-[547px] h-7 flex-wrap flex-row gap-x-10 items-center relative mb-7"
+            >
+              <a
+                href="./home.html"
+                class="font-Estedad text-[16px] font-medium hover:text-[#194BF0]"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="font-Estedad text-[16px] font-medium hover:text-[#194BF0]"
+                >خدمات ما</a
+              >
+              <a
+                href="#"
+                class="font-Estedad text-[16px] font-medium hover:text-[#194BF0]"
+                >بلاگ</a
+              >
+              <a
+                href="#"
+                class="font-Estedad text-[16px] font-medium hover:text-[#194BF0]"
+                >درباره ما</a
+              >
+              <a
+                href="#contact-section"
+                class="font-Estedad text-[16px] font-medium hover:text-[#194BF0]"
+                >تماس با ما</a
+              >
+              <details class="dropdown">
+                <summary class="btn btn-ghost m-1 p-2 h-[38px] w-10">
+                  <img src="./src/img/search-outline.svg" alt="search" />
+                </summary>
+
+                <div
+                  class="dropdown-content bg-white rounded-2xl shadow-lg w-[852px] p-4 absolute translate-x-[70%] flex flex-col gap-4"
+                >
+                  <!-- Search bar -->
+                  <div class="border-b pb-2 flex items-center justify-between">
+                    <input
+                      type="text"
+                      placeholder="جستجو..."
+                      class="input input-bordered w-full border-none focus:outline-none"
+                    />
+                    <button class="p-2 text-gray-400 hover:text-gray-600">
+                      <img
+                        src="./src/img/search-outline.svg"
+                        class="w-5 h-5"
+                        alt="icon"
+                      />
+                    </button>
+                  </div>
+
+                  <!-- History -->
+                  <div>
+                    <div class="flex items-center justify-between mb-2">
+                      <div class="flex gap-x-1.5">
+                        <img src="./src/img/clock.svg" alt="" />
+                        <p class="text-gray-600 text-sm font-medium">
+                          تاریخچه جستجوهای شما
+                        </p>
+                      </div>
+                      <button
+                        class="text-gray-400 cursor-pointer hover:text-red-500"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-5 h-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M1 7h22M9 4h6m2 0a2 2 0 012 2v1H5V6a2 2 0 012-2h10z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                      <a
+                        href="#"
+                        class="px-3 py-1 bg-gray-100 rounded-full text-sm cursor-pointer"
+                        >Tiggo 8 Pro</a
+                      >
+                      <a
+                        href="#"
+                        class="px-3 py-1 bg-gray-100 rounded-full text-sm cursor-pointer"
+                        >پرشیا ELX سفید</a
+                      >
+                      <a
+                        href="#"
+                        class="px-3 py-1 bg-gray-100 rounded-full text-sm cursor-pointer"
+                        >Rolls Royce Cullinan</a
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Popular searches -->
+                  <div>
+                    <div class="flex">
+                      <div class="flex gap-x-1.5">
+                        <img
+                          src="./src/img/heart-search.svg"
+                          class="size-5"
+                          alt=""
+                        />
+                        <p class="text-gray-600 text-sm font-medium mb-2">
+                          جستجوهای پرطرفدار
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                      <a
+                        href="#"
+                        class="px-3 py-1 bg-gray-100 rounded-full text-sm"
+                        >Audi A8</a
+                      >
+                      <a
+                        href="#"
+                        class="px-3 py-1 bg-gray-100 rounded-full text-sm"
+                        >Peugeot 206</a
+                      >
+                      <a
+                        href="#"
+                        class="px-3 py-1 bg-gray-100 rounded-full text-sm"
+                        >Ferrari Roma</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <a
+              href="./login.html"
+              class="font-Estedad 2xl:h-[45px] 2xl:w-[132px] w-28 h-[35px] rounded-lg bg-[#194BF0] text-[white] items-center justify-center flex gap-x-2 text-[16px] hover:bg-primary/80 transition-all duration-200 ease-linear"
+            >
+              <span>ورود</span><span>/</span><span>ثبت نام</span>
+            </a>
+          </div>
+          <div
+            class="w-[300px] h-[200px] left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] absolute"
+          >
+            <h1
+              class="font-Estedad text-[#FDB713] text-[32px] font-bold text-center mt-[82px]"
+            >
+              پرداخت
+            </h1>
+            <p class="flex justify-center items-center -translate-y-2">
+              <span class="text-[#868686] text-[14px]">اتورنت</span>
+              <span
+                ><svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.50014 10.3348C7.40514 10.3348 7.31014 10.2998 7.23514 10.2248L3.97514 6.96477C3.44514 6.43477 3.44514 5.56477 3.97514 5.03477L7.23514 1.77477C7.38014 1.62977 7.62014 1.62977 7.76514 1.77477C7.91014 1.91977 7.91014 2.15977 7.76514 2.30477L4.50514 5.56477C4.26514 5.80477 4.26514 6.19477 4.50514 6.43477L7.76514 9.69477C7.91014 9.83977 7.91014 10.0798 7.76514 10.2248C7.69014 10.2948 7.59514 10.3348 7.50014 10.3348Z"
+                    fill="#868686"
+                  />
+                </svg>
+              </span>
+              <span class="text-[#868686] text-[14px]"
+                >لیست خودروهای اجاره ای</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- #region steps-->
+      <div
+        class="steps bg-[#FFFFFF] lg:w-[1224px] md:w-5xl sm:w-[600px] sm:h-[122px] h-[430px] mx-auto mt-14 rounded-xl flex flex-col sm:flex-row items-center px-4"
+      >
+        <div
+          class="steps-items w-[88px] flex flex-col items-center justify-center gap-y-1"
+        >
+          <img src="./src/img/pay/tick.svg" alt="" />
+          <h2
+            class="text-[16px] text-[#727272] font-Estedad font-normal w-full"
+          >
+            انتخاب خودرو
+          </h2>
+        </div>
+        <span class="bg-[#AEAEAE] h-px flex-1"></span>
+        <div
+          class="steps-items w-[88px] flex flex-col items-center justify-center gap-y-1"
+        >
+          <img src="./src/img/pay/tick.svg" alt="" />
+          <h2
+            class="text-[16px] text-[#727272] font-Estedad font-normal w-full text-center"
+          >
+            مشخصات
+          </h2>
+        </div>
+
+        <span class="bg-[#AEAEAE] h-px flex-1"></span>
+        <div
+          class="steps-items w-[88px] flex flex-col items-center justify-center gap-y-1"
+        >
+          <img src="./src/img/pay/tick.svg" alt="" />
+          <h2
+            class="text-[16px] text-[#727272] font-Estedad font-normal w-full text-center"
+          >
+            تائید اطلاعات
+          </h2>
+        </div>
+        <span class="bg-[#AEAEAE] h-px flex-1"></span>
+        <div
+          class="steps-items w-[88px] flex flex-col items-center justify-center"
+        >
+          <img src="./src/img/pay/Component 136.svg" alt="" />
+          <h2
+            class="text-[16px] text-[#727272] font-Estedad font-normal w-full text-center"
+          >
+            پرداخت
+          </h2>
+        </div>
+        <span class="bg-[#AEAEAE] h-px flex-1"></span>
+        <div
+          class="steps-items w-[88px] flex flex-col items-center justify-center gap-y-1"
+        >
+          <img src="./src/img/pay/Component.svg" alt="" />
+          <h2
+            class="text-[16px] text-[#727272] font-Estedad font-normal w-full text-center"
+          >
+            تحویل خودرو
+          </h2>
+        </div>
+      </div>
+
+      <!-- #endregion steps -->
+      <!-- #region infos-->
+      <div
+        class="infos bg-[#FFFFFF] max-w-[1224px] w-full md:h-[269px] h-[300px] mt-6 rounded-[14px] p-6 mx-auto"
+      >
+        <h1 class="font-Estedad font-bold text-[24px] text-[#353535]">
+          اطلاعات رزرو
+        </h1>
+        <div class="flex items-center mt-2">
+          <span class="w-[93px] bg-[#FDB713] h-[3px] block"></span>
+          <span class="h-px flex-1 bg-[#D7D7D7]"></span>
+        </div>
+        <div class="grid-cols-3 grid grid-rows-3 gap-y-5 mt-5">
+          <div class="flex justify-start items-center gap-x-2">
+            <img src="./src/img/pay/schwarzetick.svg" alt="" />
+            <div>
+              <h2 class="font-Estedad font-normal text-[12px] text-[#353535]">
+                محل تحویل
+              </h2>
+              <p class="font-Estedad font-normal text-[12px] text-[#727272]">
+                تحویل در محل تهران
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-start items-center gap-x-2">
+            <img src="./src/img/pay/schwarzetick.svg" alt="" />
+            <div>
+              <h2 class="font-Estedad font-normal text-[12px] text-[#353535]">
+                تاریخ تحویل
+              </h2>
+              <p class="font-Estedad font-normal text-[12px] text-[#727272]">
+                1403/02/10
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-start items-center gap-x-2">
+            <img src="./src/img/pay/schwarzetick.svg" alt="" />
+            <div>
+              <h2 class="font-Estedad font-normal text-[12px] text-[#353535]">
+                خودرو
+              </h2>
+              <p class="font-Estedad font-normal text-[12px] text-[#727272]">
+                بنز s500
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-start items-center gap-x-2">
+            <img src="./src/img/pay/schwarzetick.svg" alt="" />
+            <div>
+              <h2 class="font-Estedad font-normal text-[12px] text-[#353535]">
+                محل بازگشت
+              </h2>
+              <p class="font-Estedad font-normal text-[12px] text-[#727272]">
+                تحویل در محل بازگشت
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-start items-center gap-x-2">
+            <img src="./src/img/pay/schwarzetick.svg" alt="" />
+            <div>
+              <h2 class="font-Estedad font-normal text-[12px] text-[#353535]">
+                تاریخ بازگشت
+              </h2>
+              <p class="font-Estedad font-normal text-[12px] text-[#727272]">
+                1403/02/28
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-start items-center gap-x-2">
+            <img src="./src/img/pay/schwarzetick.svg" alt="" />
+            <div>
+              <h2 class="font-Estedad font-normal text-[12px] text-[#353535]">
+                باراننده
+              </h2>
+            </div>
+          </div>
+          <div class="flex justify-start items-center gap-x-2">
+            <img src="./src/img/pay/schwarzetick.svg" alt="" />
+            <div>
+              <h2 class="font-Estedad font-normal text-[12px] text-[#353535]">
+                محل
+              </h2>
+              <p class="font-Estedad font-normal text-[12px] text-[#727272]">
+                تهران
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-start items-center gap-x-2">
+            <img src="./src/img/pay/schwarzetick.svg" alt="" />
+            <div>
+              <h2 class="font-Estedad font-normal text-[12px] text-[#353535]">
+                محل
+              </h2>
+              <p class="font-Estedad font-normal text-[12px] text-[#727272]">
+                تهران
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-start items-center gap-x-2">
+            <img src="./src/img/pay/schwarzetick.svg" alt="" />
+            <div>
+              <h2 class="font-Estedad font-normal text-[12px] text-[#353535]">
+                پوشش
+              </h2>
+              <p class="font-Estedad font-normal text-[12px] text-[#727272]">
+                بدون پوشش
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #endregion infos-->
+      <!-- #region calc -->
+      <div
+        class="calc md:h-[350px] h-auto max-w-[1224px] w-full bg-[#FFFFFF] mx-auto mt-6 rounded-2xl flex md:flex-row flex-col"
+      >
+        <div
+          class="calc-right h-full md:w-[60%] w-full border-dotted border-l border-[#AEAEAE] py-4 pl-14 pr-4"
+        >
+          <h1 class="font-Estedad font-bold text-[24px] text-[#353535]">
+            محاسبه قیمت
+          </h1>
+          <div class="flex items-center mt-2 mb-1">
+            <span class="w-[93px] bg-[#FDB713] h-[3px] block"></span>
+            <span class="h-px flex-1 bg-[#D7D7D7]"></span>
+          </div>
+          <div class="calc-right-items flex flex-col w-full gap-y-[13px]">
+            <div class="flex justify-between">
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                هزینه روزانه
+              </p>
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                25,500,000
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                تحویل در محل مبدا
+              </p>
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                585,000
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                تحویل در محل بازگشت
+              </p>
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                585,000
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                مالیات
+              </p>
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                3,685,510
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                مجموع هزینه
+              </p>
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                30,355,510
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                ودیعه
+              </p>
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                150,000,000
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                ودیعه راهنمایی رانندگی
+              </p>
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                0
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                مجموع هزینه بهمراه ودیعه
+              </p>
+              <p class="font-Estedad text-[12px] text-[#353535 font-normal]">
+                180,355,510
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="calc-left flex flex-col gap-y-5 px-4 py-8">
+          <div class="flex gap-x-2">
+            <input type="checkbox" checked="checked" class="checkbox" />
+            <p class="text-[#727272] text-[14px] font-Estedad font-normal">
+              مایلم ودیعه ها را بعدا پرداخت کنم.
+            </p>
+          </div>
+          <div class="flex gap-x-2">
+            <input type="checkbox" checked="checked" class="checkbox" />
+            <p class="text-[#727272] text-[14px] font-Estedad font-normal">
+              مایلم بابت ودیعه خسارت مبلغ 50,000,000 تومان نقد به همراه
+              800,000,000 میلیون تومان چک صیادی (بنفش) پرداخت نمایم.
+            </p>
+          </div>
+          <div class="flex gap-x-2 my-5">
+            <p class="text-[#9A9A9A] text-[14px] font-Estedad font-normal">
+              ودیعه تا حداکثر مبلغ 150,000,000 تومان با توجه به مدارک ارائه شده
+              از طرف شما متفاوت خواهد بود.
+            </p>
+          </div>
+          <div class="flex gap-x-2">
+            <input type="checkbox" checked="checked" class="checkbox" />
+            <p class="text-[#727272] text-[14px] font-Estedad font-normal">
+              مایلم فقط با پرداخت مبلغ 5,150,000 تومان خودرو را رزرو نمایم.
+            </p>
+          </div>
+          <a
+            href="./home.html"
+            class="h-[58px] max-w-[472px] w-full bg-[#269E22] rounded-sm text-[#FFFFFF] font-Estedad md:text-[24px] text-[18px] font-bold flex justify-between items-center p-4 opacity-50 hover:opacity-100"
+            ><p>قابل پرداخت</p>
+            <p>45,584,000 تومان</p></a
+          >
+        </div>
+      </div>
+      <!-- #endregion calc -->
+      <!-- #region  end of the day-->
+      <div
+        class="theEND max-w-[1224px] w-full bg-[#FFFFFF] h-[178px] mx-auto rounded-t-2xl mt-5 flex flex-col py-4 pr-4 pl-8 gap-y-4"
+      >
+        <h1 class="font-Estedad font-bold text-[24px] text-[#353535]">
+          محاسبه قیمت
+        </h1>
+        <div class="flex items-center mt-2 mb-1">
+          <span class="w-[93px] bg-[#FDB713] h-[3px] block"></span>
+          <span class="h-px flex-1 bg-[#D7D7D7]"></span>
+        </div>
+        <div class="flex gap-x-4">
+          <input type="checkbox" checked="checked" class="checkbox" />
+          <p class="text-[#727272] text-[12px] font-Estedad font-normal">
+            شروط و تعدات طرفین قرارداد را قبول دارم.
+          </p>
+        </div>
+        <div class="flex gap-x-2">
+          <img src="./src/img/pay/note-2.svg" alt="" />
+          <a
+            href="#"
+            class="text-[#1371F4] text-[14px] font-normal font-Estedad"
+          >
+            متن شروط و تعهدات طرفین
+          </a>
+        </div>
+      </div>
+      <div
+        class="h-[108px] max-w-[1224px] w-full bg-[#D7D7D7] mx-auto rounded-b-2xl flex justify-between p-4 items-center"
+      >
+        <h1 class="text-[24px] text-[#353535]">
+          مبلغ قابل پرداخت: 45,584,000 تومان
+        </h1>
+        <a
+          href="#"
+          class="bg-[#194BF0] h-10 w-[155px] text-[14px] text-[#FFFFFF] rounded-2xl text-center flex justify-center items-center hover:bg-[#269E22]"
+          >پرداخت</a
+        >
+      </div>
+      <!-- #endregion  end of the day-->
+      <!-- #region footer-->
+      <div
+        class="2xl:w-[1224px] lg:w-[900px] xs:w-[360px] mt-20 mx-auto bg-[#1E1E1EE5] shadow-footer rounded-2xl px-6 py-4 flex flex-col gap-y-4"
+      >
+        <!-- Top Contact Row -->
+        <div
+          class="w-full rounded-2xl border border-[#868686] p-4 flex flex-row flex-wrap justify-center lg:justify-between items-center gap-6"
+        >
+          <!-- Contact Item -->
+
+          <div
+            id="contact-section"
+            class="flex items-center gap-3 text-white xs:w-[255px] w-full"
+          >
+            <div class="shrink-0 w-10 h-10 flex items-center justify-center">
+              <img src="./src/img/icons/icon.png" alt="" class="w-8 h-8" />
+            </div>
+            <div class="flex flex-col items-start">
+              <h5 class="font-Estedad text-[16px] mb-2">ارتباط با ما</h5>
+              <h5 class="font-Estedad text-[16px]">0912-21326545</h5>
+            </div>
+          </div>
+
+          <div class="hidden lg:block w-px h-8 bg-[#868686]"></div>
+
+          <!-- Email -->
+          <div class="flex items-center gap-3 text-white xs:w-[255px] w-full">
+            <div class="shrink-0 w-10 h-10 flex items-center justify-center">
+              <img src="./src/img/icons/mail.png" alt="" class="w-8 h-8" />
+            </div>
+            <div class="flex flex-col items-start">
+              <h5 class="font-Estedad text-[16px] mb-2">ایمیل</h5>
+              <h5 class="font-Estedad text-[16px]">autorent@info.com</h5>
+            </div>
+          </div>
+
+          <div class="hidden lg:block w-px h-8 bg-[#868686]"></div>
+
+          <!-- Address -->
+          <div class="flex items-center gap-3 text-white xs:w-[255px] w-full">
+            <div class="shrink-0 w-10 h-10 flex items-center justify-center">
+              <img src="./src/img/icons/address.png" alt="" class="w-8 h-8" />
+            </div>
+            <div class="flex flex-col items-start">
+              <h5 class="font-Estedad text-[16px] mb-2">آدرس</h5>
+              <h5 class="font-Estedad text-[16px]">تهران - خیابان شادمان</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div
+          class="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 text-white mt-4"
+        >
+          <!-- Logo + Description -->
+          <div class="lg:w-[40%] text-center lg:text-right">
+            <img
+              src="./src/img/logo-footer/Logo.png"
+              alt=""
+              class="mx-auto lg:mx-0 mb-4"
+            />
+            <p class="font-Estedad text-[14px] leading-[180%]">
+              اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن بزرگترین
+              ناوگان خودرویی متشکل از انواع خودروهای صفر کیلومتر، اقتصادی تا
+              تجاری در سراسر کشور ایران آماده خدمت‌رسانی به مشتریان است.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div
+            class="flex flex-col gap-4 text-[14px] font-Estedad text-center lg:text-right"
+          >
+            <a href="#">دسترسی آسان</a>
+            <a href="#">سوالات متداول</a>
+            <a href="#">تماس با ما</a>
+            <a href="#">درباره ما</a>
+          </div>
+
+          <div
+            class="lg:w-[35%] flex flex-col items-center lg:items-start gap-3 text-center lg:text-right"
+          >
+            <h2 class="text-[16px] font-semibold">خبرنامه</h2>
+            <div
+              class="flex-col xs:flex-col lg:flex-row items-center flex justify-between gap-3 w-full"
+            >
+              <input
+                type="email"
+                placeholder="ایمیل خود را وارد کنید"
+                class="input input-md bg-transparent text-[#C2C2C2] border border-[#868686] w-full rounded-lg"
+              />
+              <button class="btn btn-warning text-[#212121] w-full lg:w-auto">
+                ارسال
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div
+          class="border-t border-t-[#868686] mt-6 flex flex-col lg:flex-row items-center justify-center gap-2 py-4"
+        >
+          <img
+            src="./src/img/icons/creative-commons.png"
+            alt=""
+            class="w-6 h-6 lg:mt-0"
+          />
+          <p class="text-[#9A9A9A] text-center text-[14px]">
+            تمامی حقوق این وبسایت متعلق به اتورنت می‌باشد
+          </p>
+        </div>
+      </div>
+      <!-- #endregion -->
+    </div>
+    <!-- #endregion wraper-->
+  </body>
+</html>
