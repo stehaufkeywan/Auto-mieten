@@ -6,9 +6,11 @@
     <title>Auto-mieten</title>
     <link rel="stylesheet" href="./src/css/output.css" />
   </head>
-  <body class="font-Estedad bg-[#F3F3F3] min-h-screen overflow-x-hidden">
+  <body
+    class="font-Estedad bg-base-100 text-base-content min-h-screen overflow-x-hidden transition-all"
+  >
     <!-- #region wraper-->
-    <div class="wrapper w-full max-w-[1440px] mx-auto">
+    <div class="wrapper w-full max-w-[1440px] mx-auto transition-all">
       <!-- #region header-hero-->
       <div class="hero-header w-full h-auto relative">
         <div
@@ -1411,6 +1413,15 @@
         </div>
       </div>
       <!-- #endregion -->
+      <div class="darkofsky flex justify-center mx-auto w-[150px] mt-6">
+        <p class="">dark mode</p>
+        <input
+          type="checkbox"
+          value="retro"
+          class="toggle theme-controller mx-auto"
+        />
+      </div>
+
       <!-- #region footer-->
       <div
         class="2xl:w-[1224px] lg:w-[900px] xs:w-[360px] mt-20 mx-auto bg-[#1E1E1EE5] shadow-footer rounded-2xl px-6 py-4 flex flex-col gap-y-4"

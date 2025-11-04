@@ -19,3 +19,8 @@
   --breakpoint-lg: 1024px;
   --breakpoint-2xl: 1440px;
 }
+
+/* ✅ DaisyUI theme config (v4 way) */
+@plugin "daisyui" {
+  themes: light, dark, retro, cyberpunk, valentine, aqua, synthwave;
+}

@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="./src/css/output.css" />
     <title>pay</title>
   </head>
-  <body class="font-Estedad bg-[#F3F3F3] min-h-screen overflow-x-hidden">
+  <body class="font-Estedad transition-all min-h-screen overflow-x-hidden">
     <!-- #region wraper-->
-    <div class="wrapper w-full max-w-[1440px] flex flex-col mx-auto">
+    <div
+      class="wrapper w-full max-w-[1440px] flex flex-col mx-auto transition-all"
+    >
       <div
         class="header xs:w-[640px] md:w-5xl 2xl:w-[1440px] mx-auto h-[400px] w-[640px] bg-center bg-cover"
         style="background-image: url('./src/img/auto-header.jpg')"
@@ -571,6 +573,14 @@
         >
       </div>
       <!-- #endregion  end of the day-->
+      <div class="darkofsky flex justify-center mx-auto w-[150px] mt-6">
+        <p class="">dark mode</p>
+        <input
+          type="checkbox"
+          value="retro"
+          class="toggle theme-controller mx-auto"
+        />
+      </div>
       <!-- #region footer-->
       <div
         class="2xl:w-[1224px] lg:w-[900px] xs:w-[360px] mt-20 mx-auto bg-[#1E1E1EE5] shadow-footer rounded-2xl px-6 py-4 flex flex-col gap-y-4"
